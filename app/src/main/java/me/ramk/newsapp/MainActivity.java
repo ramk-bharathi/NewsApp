@@ -98,12 +98,12 @@ public class MainActivity extends AppCompatActivity {
                 convertView = getLayoutInflater().inflate(R.layout.news_list, null);
                 ImageView newsThumbnail = (ImageView) convertView.findViewById(R.id.news_thumbnail);
                 TextView newsHeadline = (TextView) convertView.findViewById(R.id.news_headline);
-                TextView newsBrief = (TextView) convertView.findViewById(R.id.news_brief);
+                //TextView newsBrief = (TextView) convertView.findViewById(R.id.news_brief);
 
                 News article = newsArticlesList.get(position);
                 Picasso.with(getApplicationContext()).load(article.getPhoto_url()).into(newsThumbnail);
                 newsHeadline.setText(article.getHeadline());
-                newsBrief.setText(article.getShort_description());
+                //newsBrief.setText(article.getShort_description());
             } catch (Exception e) {
                 Log.e(MainActivity.class.getName(), "custom adaptor error: ", e);
             }
