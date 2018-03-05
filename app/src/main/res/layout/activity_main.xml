@@ -7,10 +7,10 @@
     android:orientation="vertical"
     tools:context="me.ramk.newsapp.MainActivity">
 
-    <ListView
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/base_list"
-        android:padding="16dp"/>
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:id="@+id/base_list" />
 
 </LinearLayout>
