@@ -5,9 +5,13 @@ package me.ramk.newsapp.models;
  */
 
 public class News {
+    private int id;
     private String photo_url;
     private String headline;
     private String short_description;
+    private String content;
+    private String news_state;
+    private String news_district;
 
     public String getPhoto_url() {
         return photo_url;
@@ -31,5 +35,37 @@ public class News {
 
     public void setShort_description(String short_description) {
         this.short_description = short_description;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getNews_state() {
+        return news_state;
+    }
+
+    public void setNews_state(String news_state) {
+        this.news_state = news_state;
+    }
+
+    public String getNews_district() {
+        return news_district;
+    }
+
+    public void setNews_district(String news_district) {
+        this.news_district = news_district;
     }
 }

@@ -1,5 +1,6 @@
 package me.ramk.newsapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -123,7 +124,10 @@ public class MainActivity extends AppCompatActivity {
             holder.newsHeadline.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(MainActivity.this, newsArticle.getShort_description(), Toast.LENGTH_LONG).show();;
+                    Intent intent = new Intent(MainActivity.this, ArticleActivity.class);
+                    int articleId = newsArticle.getId();
+                    intent.putExtra("articleId", articleId);
+                    startActivity(intent);
                 }
             });
         }
